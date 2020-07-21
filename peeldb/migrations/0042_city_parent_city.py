@@ -9,18 +9,13 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("peeldb", "0041_assessmentdata"),
+        ('peeldb', '0041_assessmentdata'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name="city",
-            name="parent_city",
-            field=models.ForeignKey(
-                blank=True,
-                null=True,
-                on_delete=django.db.models.deletion.CASCADE,
-                to="peeldb.City",
-            ),
+            model_name='city',
+            name='parent_city',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='peeldb.City'),
         ),
     ]

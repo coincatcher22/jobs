@@ -9,7 +9,6 @@ class PJBehaveTestCase(DjangoBehaveTestCase):
         if settings.DEBUG == False:
             settings.DEBUG = True
 
-
 class TestSuiteRunner(DjangoBehaveTestSuiteRunner):
     def make_bdd_test_suite(self, features_dir):
         return PJBehaveTestCase(features_dir=features_dir, option_info=self.option_info)
