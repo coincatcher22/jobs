@@ -276,7 +276,8 @@ class MailTemplateForm(ModelForm):
                 "Mail is too big, please try with simple matter!"
             )
         else:
-            return self.data["message"]
+            # return self.data["message"]
+            return
 
     def clean_show_recruiter(self):
         if (
