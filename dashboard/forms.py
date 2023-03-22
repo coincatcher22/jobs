@@ -18,7 +18,7 @@ from peeldb.models import (
     Question,
 )
 
-
+   
 def validation_name(self, model):
     form_cleaned_data = self.cleaned_data
     if model == "Country":
@@ -197,7 +197,8 @@ class IndustryForm(ModelForm):
             id=self.instance.id
         ):
             raise forms.ValidationError("Slug name Should be unique")
-        return form_cleaned_data["slug"]
+        # return form_cleaned_data["slug"]
+        return
 
 
 class UserForm(ModelForm):
